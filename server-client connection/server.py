@@ -9,9 +9,9 @@ import socket
 s=socket.socket()
 print("socket created successfully")
 
-port=56789
+port=56785
 
-s.bind('', port)
+s.bind(('', port))
 print(f'socket binded with port {port}')
 
 s.listen(5)
@@ -24,4 +24,3 @@ while True:
 
     c.send(message.encode())
     c.close()
-    
